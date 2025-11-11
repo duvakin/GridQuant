@@ -9,7 +9,7 @@ This python-based package introduces a crucial co-simulation and energy market f
 The workflow consists of three key stages:
 1. **Data Retrival** — Historical hourly energy spot prices from bidding zones in the European Union are accessed via the [European Network of Transmission System Operators for Electricity](https://www.entsoe.eu/) (ENTSOE) API.
 2. **Empirical Volatility Calculation** — The model computes both hourly and annualized volatility based on historical spot prices, forming the foundation of the stochastic price predictions.
-3. **Stochastic Forecast Simulation** — The system performs Monte Carlo simulations based on GBM dynamics to generate forward-looking energy price scenarios and uncertainty bounds.
+3. **Stochastic Forecast Simulation** — The model performs Monte Carlo simulations based on GBM dynamics to generate forward-looking energy price scenarios and uncertainty bounds.
 
 ## Installation
 `python3 -m pip install entsoe-py`
