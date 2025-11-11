@@ -35,6 +35,18 @@ num_years = 2
 In this example, the spot price data for France (FR) is pulled from April 2023 to April 2025.
 
 ### Annualized Volatility Calculation
+To calculate log returns, we must first drop all historical spot prices \( P_t < 0 \).  
+Then, the log return formula is applied:
+```math
+\text{Log Return} = \ln\left(\frac{P_t}{P_{t-1}}\right)
+```
+
+Then, σ (the standard deviation of log returns) is calculated for the time interval, where \( N \) is the number of hourly spot prices available in our dataset (to accommodate for incompleteness or inconsistencies in real data).
+
+```math
+\text{Annualized Volatility} = \sigma_{\text{interval}} \times \sqrt{N}
+```
+
 ```python
 # Drop null or zero columns
 zero_prices = df[df['price_EUR_per_MWh'] == 0]
