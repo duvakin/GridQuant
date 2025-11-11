@@ -1,0 +1,89 @@
+ENTSOE Code,Country or Bidding Zone,Timezone (pytz)
+AL,Albania,Europe/Tirane
+AT,Austria,Europe/Vienna
+BY,Belarus (BZ / Control Area / Market Balancing Area),
+BE,Belgium,
+BA,Bosnia and Herzegovina,
+BG,Bulgaria,
+DE_TENNET,Central Germany (TenneT Control Area),
+CWE,"Central Western Europe Region (includes DE, FR, BE, NL, LU)",
+HR,Croatia,
+CY,Cyprus,
+CZ,Czech Republic,
+CZ_DE_SK,"Czech Republic, Germany, and Slovakia Joint Bidding Zone",
+DK_2,Denmark – Eastern Bidding Zone,
+DK_1,Denmark – Western Bidding Zone,
+DK_CA,Denmark (Control Area),
+DK,Denmark (general),
+EE,Estonia,
+FI,Finland,
+FR,France,Europe/Paris
+DE,Germany,Europe/Berlin
+DE_LU,Germany and Luxembourg Joint Bidding Zone,
+DE_AT_LU,"Germany, Austria, and Luxembourg Joint Bidding Zone",
+GB,"Great Britain (National Grid – England, Scotland, Wales)",
+GR,Greece,
+HU,Hungary,
+IS,Iceland,
+IE,Ireland (Republic),Europe/Dublin
+IE_SEM,Ireland (Single Electricity Market – whole island),Europe/Dublin
+IT,Italy,Europe/Rome
+IT_BRNN,Italy – Brindisi area Bidding Zone (Puglia),Europe/Rome
+IT_CNOR,Italy – Central-North Bidding Zone,Europe/Rome
+IT_CSUD,Italy – Central-South Bidding Zone,Europe/Rome
+IT_FOGN,Italy – Foggia area Bidding Zone (Puglia),Europe/Rome
+IT_GR,Italy – Grosseto area (Tuscany),Europe/Rome
+IT_MALTA,Italy – Malta interconnection Bidding Zone,Europe/Rome
+IT_PRGP,Italy – Priolo area Bidding Zone (Southeast Sicily),Europe/Rome
+IT_ROSN,Italy – Rossano area Bidding Zone (Southern Italy),Europe/Rome
+IT_SACO_AC,Italy – Sardinia AC interconnector,Europe/Rome
+IT_SARD,Italy – Sardinia Bidding Zone,Europe/Rome
+IT_SACO_DC,Italy – Sardinia DC interconnector,Europe/Rome
+IT_SICI,Italy – Sicily Bidding Zone,Europe/Rome
+IT_SUD,Italy – Southern Bidding Zone,Europe/Rome
+RU_KGD,Kaliningrad (Russia exclave on Baltic Sea),
+LV,Latvia,
+LT,Lithuania,
+LU,Luxembourg,
+MT,Malta,
+MD,Moldova,
+ME,Montenegro,
+NL,Netherlands,Europe/Amsterdam
+MK,North Macedonia,
+DE_50HZ,Northeast Germany (50Hertz Control Area),
+GB_NIR,Northern Ireland (UK),
+IT_NORD_AT,Northern Italy – Austria border Bidding Zone,Europe/Rome
+IT_NORD_FR,Northern Italy – France border Bidding Zone,Europe/Rome
+IT_NORD_SI,Northern Italy – Slovenia border Bidding Zone,Europe/Rome
+IT_NORD_CH,Northern Italy – Switzerland border Bidding Zone,Europe/Rome
+IT_MACRO_NORTH,Northern Italy (Macrozone MBA),Europe/Rome
+IT_NORD,Northern Italy Bidding Zone,Europe/Rome
+NO_3,Norway – Central,Europe/Oslo
+NO_4,Norway – Northern,Europe/Oslo
+NO_1,Norway – Southeast (Oslo region),Europe/Oslo
+NO_2,Norway – Southwest,Europe/Oslo
+NO_5,Norway – Western coastal region (Bergen area),Europe/Oslo
+NO,Norway (general),Europe/Oslo
+PL,Poland,
+PL_CZ,Poland–Czech Republic Border Area,
+PT,Portugal,
+RO,Romania,
+RU,Russia (BZ / CA / MBA),
+RS,Serbia,
+SK,Slovakia,
+SI,Slovenia,
+IT_MACRO_SOUTH,Southern Italy (Macrozone MBA),Europe/Rome
+DE_TRANSNET,Southwest Germany (TransnetBW Control Area),Europe/Berlin
+ES,Spain,Europe/Madrid
+SE_2,Sweden – Central North,
+SE_3,Sweden – Central South,
+SE_1,Sweden – North (Luleå region),
+SE_4,Sweden – South (Malmö region),
+SE,Sweden (general),
+CH,Switzerland,Europe/Zurich
+TR,Turkey (BZ / CA / MBA),
+UA,Ukraine,
+UA_BEI,Ukraine – Burshtyn Energy Island,
+UA_DOBTPP,Ukraine – Dobrotvirska TPP Control Area,
+UA_IPS,Ukraine – Integrated Power System (mainland grid),
+DE_AMPRION,Western Germany (Amprion Control Area),Europe/Berlin
