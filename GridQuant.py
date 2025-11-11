@@ -40,8 +40,8 @@ start_year = end_year - num_years
 all_data = []
 
 # Loop through each month between start_year and end_year
-current = pd.Timestamp(f"{start_year}-{month}-01", tz=time_zone)  # Start from September 1, 2020
-end = pd.Timestamp(f"{end_year}-{month}-01", tz=time_zone)        # End at January 1, 2021
+current = pd.Timestamp(f"{start_year}-{month}-01", tz=time_zone)  # Start from April 1, 2023
+end = pd.Timestamp(f"{end_year}-{month}-01", tz=time_zone)        # End at April 1, 2025
 
 while current < end:
     next_month = current + relativedelta(months=1)
@@ -112,9 +112,6 @@ df.dropna(inplace=True)
 # Hourly volatility (standard deviation of returns)
 hourly_vol = df['log_return'].std()
 
-# Annualize: 24 hours * 365 days = 8760 trading hours per year
-# Adjust this for "effective" trading hours --> if e.g. 11358 obs in 5 years 
-# 3628 / 5 = 725.6
 annualize_factor = df.shape[0]/num_years
 annualized_vol = hourly_vol * np.sqrt(annualize_factor)
 
