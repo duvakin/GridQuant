@@ -17,4 +17,19 @@ The workflow consists of three key stages:
 *NOTE: To use `EntsoeRawClient` You will need to request your own API key by emailing [transparency@entsoe.eu](transparency@entsoe.eu).*
 
 ## Usage
-TODO
+Run `GridQuant.py` on your local machine (duh). A full list of ENTSOE country codes and their associated timezones can be found [here] for your convinience.
+
+### Inputs
+This is the default input used for the example case below. The API call will work for any other bidding zone or number of years analyzed as long as it is available on the ENTSOE database.
+
+```python
+# Desired Location/Bidding Zone
+country_code = 'FR' 
+time_zone = 'Europe/Paris'
+
+# Historical Data Window
+end_year = 2025
+month = 4 
+num_years = 2
+```
+In this example, the spot price data for France (FR) is pulled from April 2023 to April 2025.
