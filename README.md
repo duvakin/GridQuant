@@ -24,7 +24,7 @@ The historical hourly electricity spot price data pulled by GridQuant shows a st
 
 The two-week energy price forecast also indicates a slight decrease in energy prices. However, it is important to note that the GBM model is only accurate for short-term forecasts of roughly two weeks and assumes that the historical dataset is normally distributed. In reality, electricity prices are rarely—if ever—normally distributed and tend to be right-skewed. Future iterations of the model could improve forecast accuracy by incorporating backtesting, accommodating alternative distribution types, and adjusting historical data for inflation.
 
-![Image](screenshot.jpg)
+![Image](IT_CNOR_Forecast.png)
 
 ## Methodology & Usage
 Run `GridQuant.py` on your local machine (duh). A full list of ENTSOE country codes and their associated timezones can be found [here] for your convinience.
