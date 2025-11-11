@@ -60,6 +60,7 @@ Then, σ (the standard deviation of log returns) is calculated for the time inte
 ```math
 \text{Annualized Volatility} = \sigma_{\text{interval}} \times \sqrt{N}
 ```
+<br>
 
 ```python
 # Drop null or zero columns
