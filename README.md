@@ -2,7 +2,7 @@
 European market **spot price forecasts** via Monte Carlo analysis and Geometric Brownian Motion.  
 
 ## Overview
-Today, with cloud storage and AI placing unprecedented strain on the grid, energy security and building operational costs are not only an urban planning concern but a growing business risk.
+Today, with cloud storage and AI placing unprecedented strain on the grid, energy security and building operational costs are not only an urban planning concern but a growing business risk. The key contribution of this model is proposing a methodology with which to forecast volatility itself in energy markets.
 
 This python-based package introduces a crucial co-simulation and energy market forecasting method leveraging [Geometric Brownian Motion](https://www.sciencedirect.com/topics/mathematics/geometric-brownian-motion) (GBM) and [Monte Carlo](https://www.sciencedirect.com/science/article/pii/S2212567114004638) (MC) analysis to forecast energy prices with uncertainty in increasingly more volatile energy markets.
 
@@ -82,4 +82,36 @@ annualized_vol = hourly_vol * np.sqrt(annualize_factor)
 
 print(f"Hourly volatility: {hourly_vol:.6f}")
 print(f"Annualized volatility: {annualized_vol:.6f}")
+```
+### Forecasting With Uncertainty
+The GBM model provides a mathematical foundation for simulating future energy price paths by defining how prices evolve over time based on historical drift (𝜇) and volatility (𝜎). Our historical dataset provides both of these values. 𝜇 is set equal to the averge hourly historical log return and the 𝜎 is set to our hourly volatility. We opt for using hourly volality over the annualized volatility because our 2-week forecast will be hourly as well. Each new hourly price is based on the previous price and modified via the following equation:
+
+The GBM model provides a mathematical foundation for simulating future energy price paths by defining how prices evolve over time based on historical drift (𝜇) and volatility (𝜎). Our historical dataset provides both of these values: 𝜇 is set equal to the average hourly historical log return, and 𝜎 is set to our hourly volatility. We opt for using hourly volatility instead of annualized volatility because our two-week forecast is also hourly. Each new hourly price is based on the previous price and is modified via the GBM equation:
+
+```math
+S_{t+\Delta t} = S_t \times e^{\left((\mu - \tfrac{1}{2}\sigma^2)\Delta t + \sigma\sqrt{\Delta t}\,Z\right)}
+```
+<br>
+
+```python
+def gbm_additive(mu, sigma, last_price, num_simulations, dt, steps):
+    # Initialize price paths
+    simulations = np.zeros((steps, num_simulations))
+    simulations[0, :] = last_price
+
+    for t in range(1, steps):
+        # Generate random step for each simulation
+        price_step = (mu - 0.5 * sigma**2) * dt + sigma * np.random.normal(0, np.sqrt(dt), size=num_simulations)
+        # Add step to previous price
+        simulations[t, :] = simulations[t-1, :] + price_step
+
+    return simulations
+```
+The following parameters are used as the default settings for the Monte Carlo simulation:
+```python
+num_simulations = 1000 
+forecast_horizon_days = 14  # maximum days GBM model should be used to forecast
+hours_per_day = 24
+forecast_horizon_hours = forecast_horizon_days * hours_per_day
+np.random.seed(42)  # Simulation seed for reproducibility
 ```
