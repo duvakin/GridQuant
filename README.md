@@ -14,7 +14,7 @@ The workflow consists of three key stages:
 ## Installation
 `python3 -m pip install entsoe-py`
 
-*NOTE: To use `EntsoeRawClient` You will need to request your own API key by emailing [transparency@entsoe.eu](transparency@entsoe.eu).*
+*NOTE: To use `EntsoeRawClient` you will need to request your own API key by emailing [transparency@entsoe.eu](transparency@entsoe.eu).*
 
 ## ⚒️Case Study: Northern Italy
 The following case study of Italy's IT_CNOR bidding zone, located in the northern region of the country, forecasts day-ahead prices for the first two weeks of May 2025 using 2 years of historical data from April 2023 to 2025.
