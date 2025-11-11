@@ -33,3 +33,26 @@ month = 4
 num_years = 2
 ```
 In this example, the spot price data for France (FR) is pulled from April 2023 to April 2025.
+
+### Annualized Volatility Calculation
+```python
+# Drop null or zero columns
+zero_prices = df[df['price_EUR_per_MWh'] == 0]
+print(zero_prices) # This is just so you can do a quick gut check
+df = df[df['price_EUR_per_MWh'] > 0]  # Remove zero or negative prices
+
+# Calculate log returns
+df['log_return'] = np.log(df['price_EUR_per_MWh'] / df['price_EUR_per_MWh'].shift(1))
+
+# Drop NaN
+df.dropna(inplace=True)
+
+# Hourly volatility (standard deviation of returns)
+hourly_vol = df['log_return'].std()
+
+annualize_factor = df.shape[0]/num_years #normally this would be based on the number of hours in a given trading year. However, given that there are inconsistancies in the data, it is better to simply divide # of observations
+annualized_vol = hourly_vol * np.sqrt(annualize_factor)
+
+print(f"Hourly volatility: {hourly_vol:.6f}")
+print(f"Annualized volatility: {annualized_vol:.6f}")
+```
