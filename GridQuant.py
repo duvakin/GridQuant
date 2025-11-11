@@ -23,8 +23,8 @@ client = EntsoeRawClient(api_key=API_TOKEN)
 ###::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
     
 # Desired Location/Bidding Zone
-country_code = 'FR' 
-time_zone = 'Europe/Paris'
+country_code = 'IT_CNOR' 
+time_zone = 'Europe/Rome'
 
 # Historical Data Window
 end_year = 2025
@@ -96,7 +96,6 @@ print(df.head())
 ###::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # CALCULATE VOLATILITY
 ###::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
 # Assuming df has already been loaded and 'datetime' is parsed
 
 # Drop null or zero columns
