@@ -24,15 +24,15 @@ This is the default input used for the example case below. The API call will wor
 
 ```python
 # Desired Location/Bidding Zone
-country_code = 'FR' 
-time_zone = 'Europe/Paris'
+country_code = 'IT_CNOR' 
+time_zone = 'Europe/Rome'
 
 # Historical Data Window
 end_year = 2025
 month = 4 
 num_years = 2
 ```
-In this example, the spot price data for France (FR) is pulled from April 2023 to April 2025.
+In this example, the spot price data for on of Italy's bidding zones, IT_CNOR, is pulled from April 2023 to April 2025.
 
 ### Annualized Volatility Calculation
 To calculate log returns, we must first drop all historical spot prices \( P_t < 0 \).  
