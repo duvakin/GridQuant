@@ -10,6 +10,15 @@ The workflow consists of three key stages:
 1. **Data Retrival** — Historical hourly energy spot prices from bidding zones in the European Union are accessed via the [European Network of Transmission System Operators for Electricity](https://www.entsoe.eu/) (ENTSOE) API.
 2. **Empirical Volatility Calculation** — The model computes both hourly and annualized volatility based on historical spot prices, forming the foundation of the stochastic price predictions.
 3. **Stochastic Forecast Simulation** — The model performs Monte Carlo simulations based on GBM dynamics to generate forward-looking energy price scenarios and uncertainty bounds.
+<div align="center">
+  <img
+    src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=18&duration=3000&pause=8000&color=9CA3AF&center=true&vCenter=true&width=900&height=60&lines=Energy+is+no+longer+just+a+commodity,+it%27s+a+competitive+asset."
+    alt="Typing SVG"
+  />
+  <div align="right" >
+    <small>— <i>Serge Colle, EY Global Power &amp; Utilities Leader</i></small>
+  </div>
+</div>
 
 ## Installation
 `python3 -m pip install entsoe-py`
