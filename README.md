@@ -31,7 +31,7 @@ The two-week energy price forecast also indicates a slight decrease in energy pr
 </p>
 
 ## Methodology & Usage
-Run `GridQuant.py` on your local machine (duh). A full list of ENTSOE country codes and their associated timezones can be found [here] for your convinience.
+Run `GridQuant.py` on your local machine (duh). A full list of ENTSOE country codes and their associated timezones can be found in `CountryCodes.csv` for your convinience.
 
 *For guidance on using the ENTSO-E API, refer to the [entsoe-py](https://github.com/EnergieID/entsoe-py) documentation.*
 
