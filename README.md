@@ -16,7 +16,17 @@ The workflow consists of three key stages:
 
 *NOTE: To use `EntsoeRawClient` You will need to request your own API key by emailing [transparency@entsoe.eu](transparency@entsoe.eu).*
 
-## Usage
+## ⚒️Case Study: Italy
+The following case study of Italy's IT_CNOR bidding zone, located in the northern region of the country, forecasts day-ahead prices for the first two weeks of May 2025 using 2 years of historical data from April 2023 to 2025.
+The historical hourly electricity spot price data pulled by GridQuant shows a stable electricity market in comparison with many other European energy markets:
+
+![Image](screenshot.jpg)
+
+The two-week energy price forecast also indicates a slight decrease in energy prices. However, it is important to note that the GBM model is only accurate for short-term forecasts of roughly two weeks and assumes that the historical dataset is normally distributed. In reality, electricity prices are rarely—if ever—normally distributed and tend to be right-skewed. Future iterations of the model could improve forecast accuracy by incorporating backtesting, accommodating alternative distribution types, and adjusting historical data for inflation.
+
+![Image](screenshot.jpg)
+
+## Methodology and Usage
 Run `GridQuant.py` on your local machine (duh). A full list of ENTSOE country codes and their associated timezones can be found [here] for your convinience.
 
 ### Inputs
